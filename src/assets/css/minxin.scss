@@ -1,0 +1,39 @@
+// zhanglw 2018-01-26 border
+@mixin onepx-border($color: #666, $border-style: solid, $border-top-width:0px,$boter-right-width:0px,$border-bottom-width:0px,$border-left-width:0px,$border-radius:0px) {
+  &{
+    position: relative;
+    border:none;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: $border-top-width $border-style $color;
+    border-right: $boter-right-width $border-style $color;
+    border-bottom: $border-bottom-width $border-style $color;
+    border-left: $border-left-width $border-style $color;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    
+    transform: scale(0.5);
+    transform-origin: 0 0;
+
+    -webkit-transform: scale(0.5);     /* for Chrome || Safari */
+    -webkit-transform-origin: 0 0;
+
+    -moz-transform: scale(0.5);        /* for Firefox */
+    -moz-transform-origin: 0 0;
+
+    -ms-transform: scale(0.5);         /* for IE */
+    -ms-transform-origin: 0 0;
+
+    -o-transform: scale(0.5);          /* for Opera */
+    -o-transform-origin: 0 0;
+    
+    border-radius: $border-radius;
+    pointer-events:none;
+  }
+}

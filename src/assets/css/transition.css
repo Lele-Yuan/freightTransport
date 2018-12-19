@@ -1,0 +1,26 @@
+/*
+ edit by yangdan01
+ time: 2017-9-21
+ aimed to use animation
+ * */
+/*slide-name*/
+.slide-fade-enter-active {
+	transition: all .3s ease;
+}
+.slide-fade-enter-active {
+	transition: all .6s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to {
+	transform: translateY(100px);
+	opacity: 0;
+}
+/*fade*/
+.fade-enter-active, .fade-leave-active {
+	/*transition: opacity .5s;*/
+	transition: all .5s cubic-bezier(0, 1, 0.5, 1);
+	height: inherit;
+}
+
+.fade-enter, .fade-leave-to {
+	opacity: 0;
+}
